@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #0e1a26;
+  color: #ffffff;
+  scroll-behavior: smooth;
+  line-height: 1.7;
+}
+
+header {
+  background: #07101a;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 255, 136, 0.15);
+}
+
+.nav-bar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #00ff88;
+}
+
+.logo span {
+  color: #ffd700;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #00ff88;
+}
+
+
+.hero {
+  min-height: 100vh;
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  background: #0e1a26;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+}
+
+.hey {
+  color: #ffd700;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.animated-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #00ff88;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  height: 40px;
+}
+
+#animated-words {
+  color: #00ff88;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.hero-text p {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  margin-top: 1.5rem;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #00ff88;
+  color: #000;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffd700;
+  transform: scale(1.05);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00ff88;
+  transform: scale(1.2);
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  border-color: #ffd700;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 100px 20px 80px;
+  max-width: 1000px;
+  margin: auto;
+  background: #0e1a26;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  list-style: none;
+}
+
+.skills-list li {
+  background: #132c3d;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #fff;
+  box-shadow: 0 0 8px #00ff88;
+  transition: 0.3s;
+}
+
+.skills-list li:hover {
+  background: #1a3d4f;
+  transform: scale(1.1);
+}
+
+.project {
+  background: #132c3d;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #e0e0e0;
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.1);
+  transition: 0.3s;
+}
+
+.project h3 {
+  color: #00ff88;
+  margin-bottom: 10px;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #00ff88;
+}
+
+footer {
+  background: #07101a;
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text, .hero-image {
+    flex: 1 1 100%;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+.social-icons a {
+  position: relative;
+}
+
+.social-icons a:hover::after {
+  content: "Connect with me😊";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #07101a;
+  color: #ffd700;
+  padding: 6px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+}
